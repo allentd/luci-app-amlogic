@@ -63,7 +63,7 @@ SPECIFY_UBOOT=""
 }
 
 # shared partition can be ext4, xfs, btrfs, f2fs
-SHARED_FSTYPE="${4}"
+SHARED_FSTYPE="ext4"
 
 echo "AUTO_MAINLINE_UBOOT: ${AUTO_MAINLINE_UBOOT}"
 echo "SPECIFY_DTB: ${SPECIFY_DTB}"
