@@ -479,14 +479,14 @@ umount -f /mnt/${EMMC_NAME}p1 2>/dev/null
 
 echo "format rootfs1 partiton..."
 ROOTFS1_UUID=$(/usr/bin/uuidgen)
-mkfs.btrfs -f -U ${ROOTFS1_UUID} -L EMMC_ROOTFS1 -m single /dev/${EMMC_NAME}p2
+mkfs.ext4 -f -U ${ROOTFS1_UUID} -L EMMC_ROOTFS1 -m single /dev/${EMMC_NAME}p2
 mkdir -p /mnt/${EMMC_NAME}p2
 sleep 2
 umount -f /mnt/${EMMC_NAME}p2 2>/dev/null
 
 echo "format rootfs2 partiton..."
 ROOTFS2_UUID=$(/usr/bin/uuidgen)
-mkfs.btrfs -f -U ${ROOTFS2_UUID} -L EMMC_ROOTFS2 -m single /dev/${EMMC_NAME}p3
+mkfs.ext4 -f -U ${ROOTFS2_UUID} -L EMMC_ROOTFS2 -m single /dev/${EMMC_NAME}p3
 mkdir -p /mnt/${EMMC_NAME}p3
 sleep 2
 umount -f /mnt/${EMMC_NAME}p3 2>/dev/null
